@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cardview_promo"
+    android:layout_width="match_parent"
+    android:layout_height="260dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    app:cardElevation="10dp"
+    android:contextClickable="false"
+    android:layout_gravity="center"
+    android:layout_marginLeft="15dp"
+    android:layout_marginRight="15dp"
+    android:layout_marginTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image_promo"
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:src="@drawable/imagen_restaurante"
+            android:scaleType="centerCrop"/>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal">
+
+            <com.example.aimew.laviedesign.CircleImageView
+                android:id="@+id/image_card_logo_lugar"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/logo_restaurante"
+                app:civ_border_width="2dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20dp"/>
+
+            <TextView
+                android:id="@+id/text_card_nombre_lugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nombre del lugar"
+                android:textSize="20sp"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <TextView
+                android:id="@+id/text_card_distancia_lugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Distancia"
+                android:layout_below="@+id/text_card_nombre_lugar"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"/>
+
+            <RatingBar
+                android:id="@+id/rating_card_promo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_below="@+id/text_card_distancia_lugar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="5dp" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+</android.support.v7.widget.CardView>

@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_marginBottom="20dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.example.aimew.laviedesign.MainActivity"
+    tools:showIn="@layout/activity_main">
+
+    <!--Logo, nombre, ratingbar-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp">
+
+        <com.example.aimew.laviedesign.CircleImageView
+            android:id="@+id/image_logo_lugar"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="96dp"
+            android:layout_height="96dp"
+            android:src="@drawable/imagen_restaurante"
+            app:civ_border_width="2dp"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/text_nombre_lugar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Artemio Restaurante"
+                android:textSize="25sp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_marginTop="30dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:scaleX=".5"
+                android:scaleY=".5"
+                android:layout_below="@+id/text_nombre_lugar" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <!--horario, servicio de reparticion, llamar-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <View
+            android:id="@+id/view_1"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#757575"
+            android:layout_margin="15dp">
+        </View>
+
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#757575"
+            android:layout_below="@+id/image_icon_phone"
+            android:layout_marginTop="35dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginLeft="15dp">
+        </View>
+
+        <ImageView
+            android:id="@+id/image_icon_clock"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/icon_clock"
+            android:layout_centerVertical="true"
+            android:layout_alignLeft="@+id/view_2"
+            android:layout_alignStart="@+id/view_2"
+            android:layout_marginLeft="35dp"
+            android:layout_marginStart="35dp" />
+
+        <ImageView
+            android:id="@+id/image_icon_phone"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@drawable/icon_phone_black"
+            android:layout_marginRight="33dp"
+            android:layout_marginEnd="33dp"
+            android:layout_below="@+id/view_1"
+            android:layout_alignRight="@+id/view_1"
+            android:layout_alignEnd="@+id/view_1" />
+
+        <TextView
+            android:id="@+id/text_horario"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Horario"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignLeft="@+id/view_2"
+            android:layout_alignStart="@+id/view_2"
+            android:layout_marginLeft="26dp"
+            android:layout_marginStart="26dp" />
+
+        <TextView
+            android:id="@+id/text_llamar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LLamar"
+            android:textSize="15sp"
+            android:layout_below="@+id/image_icon_deliver_service"
+            android:layout_alignRight="@+id/view_2"
+            android:layout_alignEnd="@+id/view_2"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginTop="40dp"/>
+
+        <TextView
+            android:id="@+id/text_deliver_service"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Servicio"
+            android:textSize="15sp"
+            android:layout_alignParentBottom="true"
+            android:layout_toLeftOf="@+id/text_llamar"
+            android:layout_toStartOf="@+id/text_llamar"
+            android:layout_marginRight="67dp"
+            android:layout_marginEnd="67dp" />
+
+        <ImageView
+            android:id="@+id/image_icon_deliver_service"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/icon_deliver_service"
+            android:layout_centerVertical="true"
+            android:layout_alignRight="@+id/text_deliver_service"
+            android:layout_alignEnd="@+id/text_deliver_service"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp" />
+    </RelativeLayout>
+
+    <!--Descripcion del lugar-->
+    <TextView
+        android:id="@+id/text_descripcion_lugar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Un lugar en el cual puedes estar tranquilo, relajado, y degustar de un buen café acompañado de una rica cena con un servicio y calidad de primera. Lo que más importa es recibirte con amabilidad y consentir los antojos que tengas en ese momento."
+        android:layout_margin="15dp"
+        android:textColor="#000000"/>
+
+
+
+    <!--Boton promociones, boton ubicacion-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/text_promociones"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Promociones"
+            android:textSize="17sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="43dp"
+            android:layout_marginStart="43dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true" />
+
+        <View
+            android:layout_width="2dp"
+            android:layout_height="30dp"
+            android:background="#757575"
+            android:layout_centerHorizontal="true">
+        </View>
+
+        <TextView
+            android:id="@+id/text_ubicacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Ubicacion"
+            android:textSize="17sp"
+            android:layout_marginRight="50dp"
+            android:layout_marginEnd="50dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="#757575"
+            android:layout_below="@+id/text_ubicacion"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp">
+        </View>
+
+    </RelativeLayout>
+
+    <!--Lista de promociones y Mapa-->
+    <FrameLayout
+        android:id="@+id/frame_prom_mapa"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </FrameLayout>
+
+
+</LinearLayout>
